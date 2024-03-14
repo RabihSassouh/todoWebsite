@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('connection.php');
 
 $email_username = $_POST['email_username'];
@@ -20,6 +21,7 @@ if ($num_rows == 0) {
     if (password_verify($password, $hashed_password)) {
         $response['status'] = "logged in";
         $response['user_id'] = $id;
+        $_SESSION['user_id'] = $id;
         $response['name'] = $name;
         $response['username'] = $username;
         $response['email'] = $email;
