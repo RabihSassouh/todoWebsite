@@ -1,7 +1,8 @@
 <?php
+session_start();
 include('connection.php');
 
-$user_id=$_POST['user_id'];
+$user_id=$_SESSION['user_id'];
 $title = $_POST['title'];
 $description = $_POST['description'];
 
