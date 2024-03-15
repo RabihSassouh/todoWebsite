@@ -1,4 +1,9 @@
 <?php
+
+header("Access-Control-Allow-Origin: *"); // Allow requests from any origin
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS"); // Allow POST, GET, OPTIONS requests
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
 $host = "localhost";
 $db_user = "root";
 $db_pass = null;
