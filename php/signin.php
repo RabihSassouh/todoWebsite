@@ -8,7 +8,7 @@ if (isset($_POST['username_email'], $_POST['password'])) {
 
     $query = $mysqli->prepare('select *
 from users
-where email=? or username=?');
+where username=? or email=?');
     $query->bind_param('ss', $username_email, $username_email);
     $query->execute();
     $query->store_result();
@@ -18,18 +18,21 @@ where email=? or username=?');
 
     if ($num_rows == 0) {
         $response['status'] = "user not found";
+        $response['isLogged']=false;
     } else {
         if (password_verify($password, $hashed_password)) {
             $response['status'] = "logged in";
-            $response['user_id'] = $id;
             $_SESSION['user_id'] = $id;
             $response['name'] = $name;
             $response['username'] = $username;
             $response['email'] = $email;
-            $response['score'] = $score;
+            $_SESSION['score'] = $score;
+            $response['isLogged']=true;
         } else {
             $response['status'] = "incorrect credentials";
+            $response['isLogged']=false;
         }
     }
     echo json_encode($response);
 }
+?>
