@@ -1,0 +1,96 @@
+ /* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+  }
+header{
+    height: 10vh;
+    font-size: 40px;   
+}  
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 60px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+
+  /*.section1{
+    padding-top: 10vh;
+    height: 40vh;
+    justify-content: center;
+    justify-items: space-around;
+    
+}
+.mainform{
+    justify-content: center;
+    justify-content: space-around; */
+    /* align-content:space-around ; */
+    /* border: solid 2px;
+    border-color: #8f49e7; */
+/* 
+}
+.form1{
+    font-size: 15px;
+    display: flex;
+    border: solid 1px;
+    border-color: #5c5a5e9c;
+}
+.signup{
+    font-size: 20px;
+    border: solid 1px;
+    border-color: #5c5a5e9c; */
+
+    /* padding: 10px; */
+/* } */

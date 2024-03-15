@@ -4,20 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo</title>
+    <link rel="stylesheet" href="./styles/commons/colors.css" />
+    <link rel="stylesheet" href="./styles/commons/utilities.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
 </head>
 <body>
-    <header></header>
-    <div>
-        <form method="POST" action="signup.php">
-            <input type="text" name="name" placeholder="Name">
-            <input type="text" name="username" placeholder="Username">
-            <input type="email" name="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
-            <button type="submit">Sign Up</button>
+    <header class="primary-bg white-text flex center">TODO List</header>
+    <!-- <div class="flex section1 "> -->
+        <!-- <form class="flex column mainform " method="POST" action="signup.php">
+            <input class="form1" type="text" name="name" placeholder="Name">
+            <input class="form1" type="text" name="username" placeholder="Username">
+            <input class="form1" type="email" name="email" placeholder="Email">
+            <input class="form1" type="password" name="password" placeholder="Password">
+            <button class="signup" type="submit">Sign Up</button>
         </form>
         
+    </div>  -->
+    <div class="container">
+        <h1>Todo List</h1>
+        <input type="text" id="todoInput" placeholder="Add new todo">
+        <button onclick="addTodo()">Add</button>
+        <ul id="todoList">
+            <!-- Todo items will be dynamically added here -->
+        </ul>
     </div>
-    <footer></footer>
+    
+    
+    <!-- <footer></footer> -->
+
     <script src="./scripts/index.js"></script>
 </body>
 </html>

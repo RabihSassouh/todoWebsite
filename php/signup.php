@@ -1,7 +1,7 @@
 <?php
+header('Content-Type: application/json');
 include('connection.php');
 
-$response = array();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST['name'], $_POST['username'], $_POST['email'], $_POST['password'])) {
@@ -33,5 +33,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $response['status'] = "error";
     $response['message'] = "Invalid request method";
 }
-
 echo json_encode($response);
+

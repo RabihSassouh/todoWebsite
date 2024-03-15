@@ -1,0 +1,32 @@
+.primary-bg {
+    background-color: #8f49e7;
+  }
+  
+  
+  .white-bg {
+    background-color: #fff;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  
+  .primary-text {
+    color: #8f49e7;
+  }
+  
+  
+  .white-text {
+    color: #fff;
+  }
+  
+  .black-text {
+    color: #000;
+  }
+
+  
+  .primary-shadow {
+    box-shadow: 0 0 20px 0 #00000040;
+  }
+  
