@@ -1,22 +1,4 @@
 
-// const signin = (username_email, password) => {
-//   const formdata = new FormData();
-//   formdata.append("username_email", username_email);
-//   formdata.append("password", password);
-
-//   const requestOptions = {
-//     method: "POST",
-//     body: formdata,
-//   };
-
-//   fetch("http://localhost/todoWebsite/php/signin.php", requestOptions)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data);
-//     })
-//     .catch((error) => console.error(error));
-// };
-
 // signin("rabih", "123456");
 
 // const createTodo = async (formdata) => {

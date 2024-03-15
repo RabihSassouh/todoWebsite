@@ -1,8 +1,11 @@
 const signupBtn = document.getElementById("signupButton");
+const signinBtn=document.getElementById("signinButton");
 const nameInput = document.getElementById("name");
 const usernameInput = document.getElementById("username");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
+const usernameEmail = document.getElementById("username_email");
+const passwordSignIn = document.getElementById("passwordSignIn");
 
 const signup = (nameValue, usernameValue, emailValue, passwordValue) => {
   const formdata = new FormData();
@@ -39,3 +42,37 @@ const handleSignup = (event) => {
 };
 
 signupBtn.addEventListener("click", handleSignup);
+
+const signin = (username_emailValue, passwordSignInValue) => {
+  const formdata = new FormData();
+  formdata.append("username_email", username_emailValue);
+  formdata.append("password", passwordSignInValue);
+
+  const requestOptions = {
+    method: "POST",
+    body: formdata,
+  };
+
+  fetch("http://localhost/todoWebsite/php/signin.php", requestOptions)
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+      if (result.status === "logged in") {
+        window.location.href = "../index.html";
+      } else {
+        console.error("Signin failed:", result.message);
+      }
+    })
+    .catch((error) => console.error(error));
+};
+
+
+const handleSignin = (event) => {
+    event.preventDefault();
+    const usernameEmailValue = usernameEmail.value;
+    const passwordSignInValue = passwordSignIn.value;
+    signin(usernameEmailValue, passwordSignInValue); 
+};
+
+  
+  signinBtn.addEventListener("click", handleSignin);
