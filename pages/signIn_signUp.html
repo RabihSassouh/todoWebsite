@@ -6,43 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/commons/colors.css" />
     <link rel="stylesheet" href="../styles/commons/utilities.css" />
+    <link rel="stylesheet" href="../styles/signIn_signUp.css">
     <title>Signin Signup Form</title>
 </head>
 
 <body>
 
-    <form id="signinForm">
-        <input type="text" id="username_email" name="username_email" placeholder="Username or Email">
-        <input type="passwordSignIn" id="passwordSignIn" name="passwordSignIn" placeholder="Password">
-        <button type="submit" id="signinButton">Sign In</button>
-    </form>
+    <header class="primary-bg white-text flex center">TODO List</header>
+    <div class="flex center main">
+        <div class="signin-section flex column">
+            <form id="signinForm">
+                <input type="text" id="username_email" name="username_email" placeholder="Username or Email">
+                <input type="passwordSignIn" id="passwordSignIn" name="passwordSignIn" placeholder="Password">
+                <button type="submit" id="signinButton">Sign In</button>
+            </form>
+            <div>don't have an account yet?!</div>
+            <button id="popup_signup">Signup now</button>
 
 
-    <div class="container hidden">
-        <h1>Signup</h1>
-        <form id="signupForm">
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
+            <div id="container" class="container hidden">
+                <h1>Signup</h1>
+                <form id="signupForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="button" id="signupButton" class="btn btn-primary">Signup</button>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" required>
-            </div>
-            <button type="button" id="signupButton" class="btn btn-primary">Signup</button>
-        </form>
+        </div>
     </div>
-
-
 
     <script src="../scripts/signIn_signUp.js"></script>
 
