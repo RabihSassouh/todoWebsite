@@ -6,8 +6,8 @@ const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const usernameEmail = document.getElementById("username_email");
 const passwordSignIn = document.getElementById("passwordSignIn");
-const popup_signup=document.getElementById("popup_signup");
-const cont=document.getElementById("container");
+const openPopup=document.getElementById("openPopup");
+const signupOpen=document.getElementById("container");
 
 const signup = (nameValue, usernameValue, emailValue, passwordValue) => {
   const formdata = new FormData();
@@ -80,7 +80,6 @@ const handleSignin = (event) => {
   signinBtn.addEventListener("click", handleSignin);
   
   
-  popup_signup.addEventListener("click",(cont)=>{
-     
-    cont=document.querySelector.classList.remove("hidden");
-  });
+  openPopup.onclick=function(){   
+    signupOpen.classList.remove("hidden");
+  };
